@@ -1,8 +1,0 @@
-SOLR_URL: https://query.discovery.trln.org/trlnbib
-LOCAL_INSTITUTION_CODE: nccu
-APPLICATION_NAME: TRLN Argon
-REFWORKS_URL: 'http://www.refworks.com.libproxy.lib.unc.edu/express/ExpressImport.asp?vendor=SearchUNC&filter=RIS%20Format&encoding=65001&url='
-ROOT_URL: 'localhost:3005/catalog'
-ARTICLE_SEARCH_URL: 'http://libproxy.lib.unc.edu/login?url=http://unc.summon.serialssolutions.com/search?s.secure=f&s.ho=t&s.role=authenticated&s.ps=20&s.q='
-CONTACT_URL: 'https://library.unc.edu/ask/'
-FEEDBACK_URL: ''
