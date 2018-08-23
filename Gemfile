@@ -39,6 +39,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'blacklight', "~> 6.7"
 gem 'trln_argon', git: 'https://github.com/trln/trln_argon'
 
+gem 'traject'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
