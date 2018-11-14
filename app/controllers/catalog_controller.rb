@@ -12,6 +12,11 @@ class CatalogController < ApplicationController
 
 
   configure_blacklight do |config|
+    # Add Request button using Blacklight's extensible "tools" for
+    # index & show view
+    config.add_show_tools_partial(:request_button, partial: 'request_button')
+    config.add_results_document_tool(:request_button, partial: 'request_button')
+
     ## Class for sending and receiving requests from a search index
     # config.repository_class = Blacklight::Solr::Repository
     #
