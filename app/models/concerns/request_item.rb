@@ -14,7 +14,11 @@ module RequestItem
   end
 
   def illiad_request_params
-    params = illiad_request_params_fixed.merge(illiad_request_params_variable)
+    if fetch(TrlnArgon::Fields::RESOURCE_TYPE, []).include?('Journal, Magazine, or Periodical')
+      params = illiad_request_params_fixed.merge(illiad_request_params_journal_variable)
+    else
+      params = illiad_request_params_fixed.merge(illiad_request_params_book_variable)
+    end
     params.to_query
   end
 
@@ -37,25 +41,35 @@ module RequestItem
   def illiad_request_params_fixed
     {
       'Value': 'GenericRequestTRLNLoan',
-      'genre': 'TRLNbook',
       'RequestType': 'null',
-      'form': '21',
       'Action': '10',
       'IlliadForm': 'Logon',
-      'CitedPages': 'TRLN'
+      'CitedPages': 'TRLN',
+      'ESPNumber': oclc_number,
+      'Location': item_url_absolute
     }
   end
 
-  def illiad_request_params_variable
+  def illiad_request_params_book_variable
     {
-      'Location': item_url_absolute,
+      'genre': 'TRLNbook',
+      'form': '21',
       'LoanTitle': fetch(TrlnArgon::Fields::TITLE_MAIN, ''),
-      'ESPNumber': oclc_number,
-      'ISSN': isbn_number.join(' / '),
       'LoanEdition': edition,
       'LoanPublisher': imprint_main_for_header_display,
-      'LoanAuthor': statement_of_responsibility
+      'LoanAuthor': statement_of_responsibility,
+      'ISSN': isbn_number.join(' / ')
+
     }
+  end
+
+  def illiad_request_params_journal_variable
+    {
+      'genre': 'TRLNjournal',
+      'form': '22',
+      'PhotoJournalTitle': fetch(TrlnArgon::Fields::TITLE_MAIN, ''),
+      'ISSN': issn.join(' / ')
+    }  
   end
 
   def item_url_absolute
