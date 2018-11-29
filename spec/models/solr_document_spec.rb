@@ -136,7 +136,7 @@ describe SolrDocument do
             'Value': 'GenericRequestTRLNLoan',
             'genre': 'TRLNbook'
           )
-        allow(solr_document).to receive(:illiad_request_params_variable)\
+        allow(solr_document).to receive(:illiad_request_params_book_variable)\
           .and_return(
             'Location': 'https://find.library.duke.edu/trln/DUKE003485622',
             'LoanTitle': 'Blue blood',
@@ -157,6 +157,38 @@ describe SolrDocument do
           '&Location=https%3A%2F%2Ffind.library.duke.edu%2F'\
           'trln%2FDUKE003485622'\
           '&Value=GenericRequestTRLNLoan&genre=TRLNbook'
+        )
+      end
+      # rubocop:enable RSpec/ExampleLength
+    end
+
+    describe 'illiad_request_params' do
+      let(:solr_document) do
+        described_class.new(
+          id: 'NCSU295414',
+          resource_type_a: ["Journal, Magazine, or Periodical"]
+        )
+      end
+
+      before do
+        allow(solr_document).to receive(:illiad_request_params_fixed)\
+          .and_return(
+            'Value': 'GenericRequestTRLNLoan',
+            'genre': 'TRLNjournal'
+          )
+        allow(solr_document).to receive(:illiad_request_params_journal_variable)\
+          .and_return(
+            'ESPNumber': '505249141',
+            'PhotoJournalTitle': 'Nature methods.',
+            'ISSN': '0036-8075 / 0096-3771'
+          )
+      end
+
+      # rubocop:disable RSpec/ExampleLength
+      it 'returns the combined parameters as URL query string' do
+        expect(solr_document.illiad_request_params).to eq(
+          'ESPNumber=505249141&ISSN=0036-8075+%2F+0096-3771'\
+          '&PhotoJournalTitle=Nature+methods.&Value=GenericRequestTRLNLoan&genre=TRLNjournal'
         )
       end
       # rubocop:enable RSpec/ExampleLength
