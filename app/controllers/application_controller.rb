@@ -3,4 +3,8 @@ class ApplicationController < ActionController::Base
   include Blacklight::Controller
   layout 'blacklight'
 
+  protect_from_forgery with: :exception
+
+  skip_after_action :discard_flash_if_xhr
+
 end
