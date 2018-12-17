@@ -1,0 +1,9 @@
+<div class="page-header">
+  <h1 class="main-title"><%= t('blacklight.home.welcome') %></h1>
+  <p class="tagline"><%= t('blacklight.home.blurb') %></h4>
+</div>
+
+<ul class="underlined-links home-welcome-links">
+  <li><%= link_to t('blacklight.help.ask_a_librarian'), TrlnArgon::Engine.configuration.contact_url, target: "_blank" %> <%= t('blacklight.help.for_answers') %></li>
+  <li><%= t("blacklight.help.worldcat_link_html") %></li>
+</ul>
