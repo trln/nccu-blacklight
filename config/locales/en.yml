@@ -32,8 +32,14 @@
 en:
   blacklight:
     home:
-      welcome: "Central University Libraries Catalog"
-      blurb: "Find books, ebooks, journals, movies and music, government documents, and more"
+      welcome: "Search TRLN"
+      blurb: "Find books, ebooks, journals, movies and music, government documents, and more from all TRLN libraries"
+    help:
+      ask_a_librarian: "Ask a Librarian"
+      for_answers: "to get answers quickly"
+      worldcat_link_html: "Use <a href='https://northcarolinacentuniversity.worldcat.org/' target='_blank'>WorldCat</a> to search holdings from UNC System Libraries & Beyond"
+
+trln_argon:
 
   trln_argon:
     links:
