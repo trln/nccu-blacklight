@@ -31,6 +31,9 @@ class CatalogController < ApplicationController
       rows: 10
     }
 
+    config.home_facet_fields.delete(TrlnArgon::Fields::LANGUAGE_FACET)
+    config.home_facet_fields.delete(TrlnArgon::Fields::CALL_NUMBER_FACET)
+
     # solr path which will be added to solr base url before the other solr params.
     #config.solr_path = 'select'
 
