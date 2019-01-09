@@ -135,4 +135,35 @@ class CatalogController < ApplicationController
     # config.autocomplete_enabled = true
     # config.autocomplete_path = 'suggest'
   end
+
+  # get search results from the solr index
+     def index
+       if (params.keys - %w[controller action]).empty?
+         cache_key = "#{params.fetch('controller', '')}/"\
+                     "#{params.fetch('action', '')}"\
+                     "facet_query"\
+       end
+
+       (@response, @document_list) =  if cache_key
+         Rails.cache.fetch("#{cache_key}", expires_in: 1.hour) do
+           search_results(params)
+         end
+       else
+         search_results(params)
+       end
+
+       respond_to do |format|
+         format.html { store_preferred_view }
+         format.rss  { render :layout => false }
+         format.atom { render :layout => false }
+         format.json do
+           @presenter = Blacklight::JsonPresenter.new(@response,
+                                                      @document_list,
+                                                      facets_from_request,
+                                                      blacklight_config)
+         end
+         additional_response_formats(format)
+         document_export_formats(format)
+       end
+     end
 end
