@@ -31,6 +31,9 @@ class CatalogController < ApplicationController
       rows: 10
     }
 
+    config.home_facet_fields.delete(TrlnArgon::Fields::AVAILABLE_FACET)
+    config.facet_fields.delete(TrlnArgon::Fields::AVAILABLE_FACET)
+    
     config.home_facet_fields.delete(TrlnArgon::Fields::LANGUAGE_FACET)
     config.home_facet_fields.delete(TrlnArgon::Fields::CALL_NUMBER_FACET)
 
