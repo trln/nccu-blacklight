@@ -41,4 +41,9 @@
 # Ignore sensitive configs
 #config/database.yml
 config/local_env.yml
+config/environments/production.rb
+
+# ignore argon mappings
+config/mappings/argon_mappings*
+
 
