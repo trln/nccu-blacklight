@@ -1,0 +1,16 @@
+#documents div.items.well { 
+  clear:both; 
+}
+
+#documents div.documentHeader.has-thumbnail {
+  float: left;
+  width: calc(100% - 95px);
+}
+
+#documents.documents-list div.blacklight.thumbnail {
+  margin-bottom: 1em;
+  margin-right: 1em;
+  img {
+    max-width: 90px;
+  }
+}
