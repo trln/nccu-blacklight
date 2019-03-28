@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module DulArgonSkin
-  VERSION = '0.0.9'
+module NccuArgonSkin
+  VERSION = '0.0.10'
 end
