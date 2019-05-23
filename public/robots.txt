@@ -1,1 +1,15 @@
 # See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+# robots.txt
+
+User-agent: Pipl
+Disallow: /
+
+User-agent: Semrush
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+# Only use wildcard here in robots.txt
+User-agent: *
+Disallow: /
