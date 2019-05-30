@@ -46,6 +46,9 @@ config/secrets.yml
 #config/database.yml
 config/local_env.yml
 
-# ignore argon mappings
+# Ignore argon mappings
 config/mappings/argon_mappings/*
+
+# Ignore cron jobs
+cron/*
 
