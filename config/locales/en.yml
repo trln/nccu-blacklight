@@ -37,7 +37,7 @@ en:
     help:
       ask_a_librarian: "Ask a Librarian"
       for_answers: "to get answers quickly"
-      worldcat_link_html: "Use <a href='https://northcarolinacentuniversity.worldcat.org/' target='_blank'>WorldCat</a> to search holdings from UNC System Libraries & Beyond"
+      worldcat_link_html: "<a href='https://northcarolinacentuniversity.worldcat.org/' target='_blank'>Search holdings from UNC System Libraries & Beyond</a>"
     search:
       form:
         search:
