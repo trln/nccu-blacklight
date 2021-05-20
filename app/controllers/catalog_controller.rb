@@ -28,7 +28,8 @@ class CatalogController < ApplicationController
 
     ## Default parameters to send to solr for all search-like requests. See also SearchBuilder#processed_parameters
     config.default_solr_params = {
-      rows: 10
+      rows: 10,
+      spellcheck: 'true'
     }
 
     config.home_facet_fields.delete(TrlnArgon::Fields::AVAILABLE_FACET)
