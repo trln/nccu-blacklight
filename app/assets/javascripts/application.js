@@ -13,6 +13,8 @@
 //= require rails-ujs
 //= require activestorage
 
+//= require popper
+
 //
 // Required by Blacklight
 //= require jquery

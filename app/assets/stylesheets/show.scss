@@ -1,16 +1,56 @@
+@import 'trln_argon_variables';
+
 #document-tools .request-from-trln {
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
+  padding: 7px 10px;
+  font-size: 14.5px;
   background-color: maroon;
   color: white;
+  line-height: 1.5;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-bottom: 28px;
+  touch-action: manipulation;
  }
 
-.request-from-trln {
-  padding: 5px 10px;
-  font-size: 14px;
-  line-height: 1.5;
+#documents .request-from-trln {
+  padding: 7px 10px;
+  font-size: 14.5px;
   background-color: maroon;
   color: white;
+  line-height: 1.5;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-bottom: 28px;
+  touch-action: manipulation;
  }
 
+#show-sub-header {
+    li {
+        font-size: 18px;
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: -2em;
+    }
+}
+
+.navbar-logo {
+  @if $institution-logo {
+    background: transparent $institution-logo no-repeat top left;
+  }
+  background-size: contain;
+
+  display: inline-block;
+  flex: 0 0 300px;
+  height: 50px;
+  margin-right:20px;
+  margin-top: 1rem;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 150px;
+  border-width: 10px 0 0;
+  background-color: #fff;
+  border-color: #800000;
+}

@@ -150,10 +150,10 @@ class CatalogController < ApplicationController
 
        (@response, @document_list) =  if cache_key
          Rails.cache.fetch("#{cache_key}", expires_in: 1.hour) do
-           search_results(params)
+           search_service.search_results
          end
        else
-         search_results(params)
+         search_service.search_results
        end
 
        respond_to do |format|

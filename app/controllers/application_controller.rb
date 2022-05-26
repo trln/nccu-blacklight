@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
-  skip_after_action :discard_flash_if_xhr
+  #skip_after_action :discard_flash_if_xhr
 
 end
