@@ -3,7 +3,7 @@
 #document-tools .request-from-trln {
   padding: 7px 10px;
   font-size: 14.5px;
-  background-color: maroon;
+  background-color: $primary-color;
   color: white;
   line-height: 1.5;
   border-radius: 3px;
@@ -15,7 +15,7 @@
 #documents .request-from-trln {
   padding: 7px 10px;
   font-size: 14.5px;
-  background-color: maroon;
+  background-color: $primary-color;
   color: white;
   line-height: 1.5;
   border-radius: 3px;
@@ -52,5 +52,11 @@
   width: 150px;
   border-width: 10px 0 0;
   background-color: #fff;
-  border-color: #800000;
+  border-color: $primary-color;
+}
+
+.navbar-expand-md {
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  border-top: 10px solid $primary-color;
 }
