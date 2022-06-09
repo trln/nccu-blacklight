@@ -60,3 +60,7 @@
   justify-content: flex-start;
   border-top: 10px solid $primary-color;
 }
+
+.navbar + .container {
+  padding-top: 2rem !important;
+}
