@@ -17,10 +17,6 @@ class CatalogController < ApplicationController
     config.add_show_tools_partial(:request_button, partial: 'request_button')
     config.add_results_document_tool(:request_button, partial: 'request_button')
 
-    config.add_nav_action(:search_history,
-                          partial: 'blacklight/nav/search_history')
-
-
     ## Class for sending and receiving requests from a search index
     # config.repository_class = Blacklight::Solr::Repository
     #
