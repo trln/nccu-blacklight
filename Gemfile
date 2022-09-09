@@ -39,7 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4'
 
 gem 'blacklight', '~> 7.24'
-gem 'trln_argon', git: 'https://github.com/trln/trln_argon'
+gem 'trln_argon', git: 'https://github.com/trln/trln_argon', branch: 'main'
 
 gem 'traject'
 
