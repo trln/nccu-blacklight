@@ -47,5 +47,12 @@ en:
     links:
       online_access: "View Online"
       hathitrust: "View Online"
+      online_access_restricted: "View Online (%{institution} Only)"
+      open_access: "View Online"
     local_filter:
       searching_trln: 'NCCU, UNC, Duke, NC State Libraries'
+    search:
+      zero_results:
+        expand_search_html_href:
+          zero: 'Try a different search'
+        worldcat_href: 'View results at libraries beyond NCCU, UNC, Duke, or NC State'
