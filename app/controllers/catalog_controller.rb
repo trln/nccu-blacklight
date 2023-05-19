@@ -118,8 +118,33 @@ class CatalogController < ApplicationController
     # case for a BL "search field", which is really a dismax aggregate
     # of Solr search fields.
 
+    # make Advanced Search facet fields NOT limited to those configured as home_facets.
+    def advanced_search
+      (@response, _deprecated_document_list) = blacklight_advanced_search_form_search_service.search_results do |builder|
+        builder.except(:only_home_facets)
+      end
+    end
 
-
+    config.advanced_search[:form_solr_parameters] = {
+      # NOTE: You will not get any facets back
+      #       on the advanced search page
+      #       unless defType is set to lucene.
+      'defType' => 'lucene',
+      'facet.field' => [TrlnArgon::Fields::AVAILABLE_FACET.to_s,
+                        TrlnArgon::Fields::ACCESS_TYPE_FACET.to_s,
+                        TrlnArgon::Fields::RESOURCE_TYPE_FACET.to_s,
+                        TrlnArgon::Fields::PHYSICAL_MEDIA_FACET.to_s,
+                        TrlnArgon::Fields::LANGUAGE_FACET.to_s,
+                        TrlnArgon::Fields::CALL_NUMBER_FACET.to_s,
+                        TrlnArgon::Fields::LOCATION_HIERARCHY_FACET.to_s],
+      'f.resource_type_f.facet.limit' => -1, # return all resource type values
+      'f.language_f.facet.limit' => -1, # return all language facet values
+      'f.call_number_f.facet.limit' => -1, # return all call number values
+      'f.location_hierarchy_f.facet.limit' => -1, # return all loc facet values
+      'f.physical_media_f.facet.limit' => -1, # return all phys med facet values
+      'facet.limit' => -1, # return all facet values
+      'facet.sort' => 'index' # sort by byte order of values
+    }
 
 
     # Specifying a :qt only to show it's possible, and so our internal automated
