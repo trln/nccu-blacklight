@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/trln/trln_argon
-  revision: bb869c5b04151350d1dec29ee90faa64850554d6
+  revision: e74478d7a050af38a2464446ee4bf82322e1803d
   branch: main
   specs:
-    trln_argon (2.2.9)
+    trln_argon (2.2.10)
       addressable (~> 2.5)
       blacklight (~> 7.0)
       blacklight-hierarchy (~> 4)
@@ -172,7 +172,7 @@ GEM
     erubi (1.12.0)
     erubis (2.7.0)
     execjs (2.8.1)
-    faraday (2.7.4)
+    faraday (2.7.5)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
@@ -249,7 +249,7 @@ GEM
     mini_portile2 (2.8.2)
     minitar (0.9)
     minitest (5.18.0)
-    msgpack (1.7.0)
+    msgpack (1.7.1)
     net-imap (0.3.4)
       date
       net-protocol
@@ -260,7 +260,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.1)
+    nokogiri (1.15.2)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     openurl (1.0.0)
