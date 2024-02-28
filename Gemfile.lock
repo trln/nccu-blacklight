@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/trln/blacklight-hierarchy
+  revision: 1cad930b89ce1c059b3d84833f5e54de0510bf9d
+  branch: main
+  specs:
+    blacklight-hierarchy (6.3.1)
+      blacklight (>= 7.18, < 9)
+      deprecation
+      rails (>= 6.1, < 7.2)
+
+GIT
   remote: https://github.com/trln/trln_argon
   revision: 02a84079d9736e1420eca2123fc36efb1af3d1e3
   branch: rails-7
@@ -256,7 +266,7 @@ GEM
       unf
     marc-fastxmlwriter (1.1.0)
       marc (~> 1.0)
-    marcel (1.0.2)
+    marcel (1.0.3)
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.5)
@@ -276,7 +286,17 @@ GEM
     net-smtp (0.4.0.1)
       net-protocol
     nio4r (2.7.0)
+    nokogiri (1.16.2-aarch64-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.2-arm-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.2-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.2-x86-linux)
+      racc (~> 1.4)
     nokogiri (1.16.2-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     ostruct (0.6.0)
@@ -285,7 +305,7 @@ GEM
     psych (5.1.2)
       stringio
     public_suffix (5.0.4)
-    puma (4.3.12)
+    puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.3)
     rack (3.0.9.1)
@@ -398,7 +418,12 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    sqlite3 (1.7.2-aarch64-linux)
+    sqlite3 (1.7.2-arm-linux)
+    sqlite3 (1.7.2-arm64-darwin)
+    sqlite3 (1.7.2-x86-linux)
     sqlite3 (1.7.2-x86_64-darwin)
+    sqlite3 (1.7.2-x86_64-linux)
     stringio (3.1.0)
     terser (1.2.0)
       execjs (>= 0.3.0, < 3)
@@ -448,11 +473,17 @@ GEM
     zeitwerk (2.6.13)
 
 PLATFORMS
-  x86_64-darwin-20
+  aarch64-linux
+  arm-linux
+  arm64-darwin
+  x86-linux
+  x86_64-darwin
+  x86_64-linux
 
 DEPENDENCIES
   better_errors (= 2.1.1)
   blacklight (~> 7.24)
+  blacklight-hierarchy!
   blacklight-marc (~> 7.1.1)
   bootsnap (>= 1.1.0)
   bootstrap (~> 4)
@@ -465,7 +496,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen
-  puma (~> 4.3)
+  puma
   rails (~> 7.1.0)
   rsolr (>= 1.0, < 3)
   rspec-rails (~> 3.8)
@@ -486,4 +517,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.20
+   2.5.5

@@ -12,7 +12,7 @@ gem 'sprockets', '~> 4.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
-gem 'puma', '~> 4.3'
+gem 'puma'
 # Use SCSS for stylesheets
 #gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,6 +43,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4'
 
 gem 'blacklight', '~> 7.24'
+gem 'blacklight-hierarchy', git: 'https://github.com/trln/blacklight-hierarchy', branch: 'main'
+
 gem 'trln_argon', git: 'https://github.com/trln/trln_argon', branch: 'rails-7'
 
 gem 'traject'
