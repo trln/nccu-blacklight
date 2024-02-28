@@ -1,16 +1,20 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.5'
+ruby '3.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.1.0'
+
+gem 'sassc-rails'
+gem 'sprockets', '~> 4.0'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+#gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'terser', '~> 1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -39,7 +43,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4'
 
 gem 'blacklight', '~> 7.24'
-gem 'trln_argon', git: 'https://github.com/trln/trln_argon', branch: 'main'
+gem 'trln_argon', git: 'https://github.com/trln/trln_argon', branch: 'rails-7'
 
 gem 'traject'
 
@@ -51,7 +55,7 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
