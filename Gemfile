@@ -4,17 +4,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.1.0'
+gem 'rails', '~> 7.1'
 
-gem 'sassc-rails'
 gem 'sprockets', '~> 4.0'
+gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
-#gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'terser', '~> 1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -40,7 +40,7 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'bootstrap', '~> 4'
+gem 'bootstrap', '5.3.2'
 
 gem 'blacklight', '~> 7.24'
 gem 'blacklight-hierarchy', git: 'https://github.com/trln/blacklight-hierarchy', branch: 'main'
@@ -75,13 +75,13 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.8'
+  gem 'rspec-rails'
   gem 'solr_wrapper', '>= 0.3'
 end
 
-gem 'rsolr', '>= 1.0', '< 3'
+#gem 'rsolr', '>= 1.0', '< 3'
 gem 'jquery-rails'
 gem 'devise'
 gem 'devise-guests', '~> 0.6'
-gem 'blacklight-marc', '~> 7.1.1'
+gem 'blacklight-marc', '~> 8.1'
 gem 'better_errors', '2.1.1'
