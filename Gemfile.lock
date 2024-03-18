@@ -10,10 +10,10 @@ GIT
 
 GIT
   remote: https://github.com/trln/trln_argon
-  revision: d3d1dfd8b263a3a9c5e0544e792b11feef9b8336
+  revision: d9ec242dbdce3d7932a5f3b0ad6adf74f6d0f808
   branch: rails-7
   specs:
-    trln_argon (2.2.17)
+    trln_argon (2.3.0)
       addressable (~> 2.5)
       blacklight (~> 7.0)
       blacklight_advanced_search (~> 8.0.0.alpha2)
@@ -117,7 +117,7 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
-    bigdecimal (3.1.6)
+    bigdecimal (3.1.7)
     bindex (0.8.1)
     blacklight (7.37.0)
       deprecation
@@ -195,8 +195,8 @@ GEM
     faraday-net_http (3.1.0)
       net-http
     ffi (1.16.3)
-    ffi-compiler (1.0.1)
-      ffi (>= 1.0.0)
+    ffi-compiler (1.3.2)
+      ffi (>= 1.15.5)
       rake
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
@@ -270,7 +270,7 @@ GEM
     mini_magick (4.12.0)
     mini_mime (1.1.5)
     minitar (0.9)
-    minitest (5.22.2)
+    minitest (5.22.3)
     msgpack (1.7.2)
     mutex_m (0.2.0)
     net-http (0.4.1)
@@ -285,17 +285,17 @@ GEM
     net-smtp (0.4.0.1)
       net-protocol
     nio4r (2.7.0)
-    nokogiri (1.16.2-aarch64-linux)
+    nokogiri (1.16.3-aarch64-linux)
       racc (~> 1.4)
-    nokogiri (1.16.2-arm-linux)
+    nokogiri (1.16.3-arm-linux)
       racc (~> 1.4)
-    nokogiri (1.16.2-arm64-darwin)
+    nokogiri (1.16.3-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.2-x86-linux)
+    nokogiri (1.16.3-x86-linux)
       racc (~> 1.4)
-    nokogiri (1.16.2-x86_64-darwin)
+    nokogiri (1.16.3-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.2-x86_64-linux)
+    nokogiri (1.16.3-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     ostruct (0.6.0)
@@ -418,12 +418,12 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.7.2-aarch64-linux)
-    sqlite3 (1.7.2-arm-linux)
-    sqlite3 (1.7.2-arm64-darwin)
-    sqlite3 (1.7.2-x86-linux)
-    sqlite3 (1.7.2-x86_64-darwin)
-    sqlite3 (1.7.2-x86_64-linux)
+    sqlite3 (1.7.3-aarch64-linux)
+    sqlite3 (1.7.3-arm-linux)
+    sqlite3 (1.7.3-arm64-darwin)
+    sqlite3 (1.7.3-x86-linux)
+    sqlite3 (1.7.3-x86_64-darwin)
+    sqlite3 (1.7.3-x86_64-linux)
     stringio (3.1.0)
     terser (1.2.0)
       execjs (>= 0.3.0, < 3)
