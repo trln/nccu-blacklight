@@ -52,3 +52,7 @@ config/mappings/argon_mappings/*
 # Ignore cron jobs
 cron/*
 
+# Ignore any files ending with .sqlite3-shm in the db/ directory
+*.sqlite3-shm
+*.sqlite3-wal
+
