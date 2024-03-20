@@ -41,7 +41,6 @@ gem 'mini_magick', '~> 4.8'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bootstrap', '~> 4'
-#gem 'bootstrap', '5.3.2'
 
 gem 'blacklight', '~> 7.24'
 gem 'blacklight-hierarchy', git: 'https://github.com/trln/blacklight-hierarchy', branch: 'main'
