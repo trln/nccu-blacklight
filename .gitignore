@@ -56,3 +56,4 @@ cron/*
 *.sqlite3-shm
 *.sqlite3-wal
 
+config/mappings/argon_mappings

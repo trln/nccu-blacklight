@@ -1,45 +1,34 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.5'
+ruby '3.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '1.6.9'
-# Use Puma as the app server
-gem 'puma', '~> 4.3'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'rails', '~> 7.1'
+
+gem 'sassc-rails'
+gem 'sprockets', '~> 4.0'
+gem 'sprockets-rails'
+
+gem 'sqlite3'
+gem 'puma'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'terser', '~> 1.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
 
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
  '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bootstrap', '~> 4'
 
-gem 'blacklight', '~> 7.33.1'
-gem 'trln_argon', git: 'https://github.com/trln/trln_argon', branch: 'main'
+gem 'blacklight', '~> 7.28'
+gem 'blacklight-hierarchy', git: 'https://github.com/trln/blacklight-hierarchy', tag: 'v6.3.1'
+gem 'trln_argon', git: 'https://github.com/trln/trln_argon', branch: 'rails-7'
 
 gem 'traject'
 
@@ -51,7 +40,7 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -69,7 +58,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.8'
+  gem 'rspec-rails'
   gem 'solr_wrapper', '>= 0.3'
 end
 
@@ -77,5 +66,5 @@ gem 'rsolr', '>= 1.0', '< 3'
 gem 'jquery-rails'
 gem 'devise'
 gem 'devise-guests', '~> 0.6'
-gem 'blacklight-marc', '~> 7.1.1'
+gem 'blacklight-marc', '~> 8.1'
 gem 'better_errors', '2.1.1'
