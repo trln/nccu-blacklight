@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module NccuArgonSkin
-  VERSION = '1.0.1'
+module NccuBlacklight::Version
+  VERSION = '1.1.0'
 end
