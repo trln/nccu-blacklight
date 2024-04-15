@@ -5,6 +5,7 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.enable_reloading = false
+  config.cache_classes = true
   
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
@@ -97,6 +98,8 @@ Rails.application.configure do
 
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
+
+  config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
