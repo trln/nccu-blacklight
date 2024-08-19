@@ -6,7 +6,7 @@ ruby '3.1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.1'
 
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.4'
 gem 'puma'
 gem 'sassc-rails'
 
@@ -23,7 +23,7 @@ gem 'bootstrap', '~> 4'
 
 gem 'blacklight', '~> 7.28'
 gem 'blacklight-hierarchy', git: 'https://github.com/trln/blacklight-hierarchy', tag: 'v6.3.1'
-gem 'trln_argon', git: 'https://github.com/trln/trln_argon', branch: 'rails-7'
+gem 'trln_argon', git: 'https://github.com/trln/trln_argon', branch: 'main'
 
 gem 'traject'
 gem 'rack', '< 3' # Downgrade from 3.x, so that it works with the passenger gem. Can remove when passenger supports rack 3
