@@ -12,9 +12,6 @@ class CatalogController < ApplicationController
 
 
   configure_blacklight do |config|
-    config.add_show_tools_partial(:citation,
-      icon: 'fa fa-quote-left',
-      if: false)
     # Add Request button using Blacklight's extensible "tools" for
     # index & show view
     config.add_show_tools_partial(:request_button, partial: 'request_button')
