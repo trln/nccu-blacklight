@@ -10,22 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery3
 //= require rails-ujs
-//= require activestorage
-
-//= require popper
 
 //
 // Required by Blacklight
-//= require jquery
+//= require popper
+//= require bootstrap
 //= require blacklight/blacklight
 //= require trln_argon/trln_argon
-
-
-//= require_tree .
-
-
-// For blacklight_range_limit built-in JS, if you don't want it you don't need
-// this:
-//= require 'blacklight_range_limit'
-

@@ -8,7 +8,6 @@ gem 'rails', '~> 7.1'
 
 gem 'sqlite3', '~> 1.4'
 gem 'puma'
-gem 'sassc-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'terser', '~> 1.0'
@@ -19,10 +18,9 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'bootstrap', '~> 4'
+gem 'bootstrap', '~> 5.3'
 
-gem 'blacklight', '~> 7.28'
-gem 'blacklight-hierarchy', git: 'https://github.com/trln/blacklight-hierarchy', tag: 'v6.3.1'
+gem 'blacklight', '~> 8.8'
 gem 'trln_argon', git: 'https://github.com/trln/trln_argon', branch: 'main'
 
 gem 'traject'
@@ -64,4 +62,4 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'devise-guests', '~> 0.6'
 gem 'blacklight-marc', '~> 8.1'
-gem 'better_errors', '2.1.1'
+gem 'better_errors', '>= 2.8.0'
