@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.3.0'
+ruby '3.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.1'
@@ -25,7 +25,7 @@ gem 'trln_argon', git: 'https://github.com/trln/trln_argon', branch: 'main'
 
 gem 'traject'
 gem 'rack', '< 3' # Downgrade from 3.x, so that it works with the passenger gem. Can remove when passenger supports rack 3
-gem 'pg'
+gem 'dartsass-sprockets'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
