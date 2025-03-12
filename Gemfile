@@ -27,7 +27,7 @@ gem 'trln_argon', git: 'https://github.com/trln/trln_argon', tag: 'v2.4.5'
 
 gem 'traject'
 gem 'rack', '< 3' # Downgrade from 3.x, so that it works with the passenger gem. Can remove when passenger supports rack 3
-gem 'pg'
+# gem 'pg'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
