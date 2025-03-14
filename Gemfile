@@ -63,3 +63,5 @@ gem 'devise'
 gem 'devise-guests', '~> 0.6'
 gem 'blacklight-marc', '~> 8.1'
 gem 'better_errors', '>= 2.8.0'
+
+gem "bot_challenge_page", "~> 0.2.0"
