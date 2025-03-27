@@ -11,7 +11,7 @@ module NccuBlacklight
     # Initialize configuration defaults for originally generated Rails version.
     config.before_configuration do
       env_file = File.join(Rails .root, 'config', 'local_env.yml')
-      if File.exists?(env_file)
+      if File.exist?(env_file)
         YAML.load_file(env_file).each { |key, value| ENV[key.to_s] = value }
       end
     end
